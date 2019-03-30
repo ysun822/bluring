@@ -1,0 +1,16 @@
+CC = clang
+ARGS = -Wall -g
+
+all: negative numbers blur1 blur2
+
+negative:
+	$(CC) -o negative $(ARGS) negative.c qdbmp.c
+numbers:
+	$(CC) -o numbers $(ARGS) -pthread numbers.c
+blur1:
+	$(CC) -o blur1 $(ARGS) -pthread blur1.c qdbmp.c	
+blur2:
+	$(CC) -o blur2 $(ARGS) -pthread blur2.c qdbmp.c	
+clean: 
+	rm -rf negative numbers blur1 blur2
+
