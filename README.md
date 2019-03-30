@@ -1,1 +1,1 @@
-# bluring
+# blurring
